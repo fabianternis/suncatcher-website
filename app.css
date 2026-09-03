@@ -1,0 +1,16 @@
+:root {
+    --hex-0: #000;
+    /* ...
+    ToDo: Add more ...
+     */
+    --hex-255: #fff;
+
+    --color-full-black: var(var(--hex-0));
+    --color-full-white: var(var(--hex-255));
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}

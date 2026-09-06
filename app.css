@@ -85,6 +85,7 @@
 }
 
 body {
+    transform: translateY(-100dvh); /* fix "too much scrolling" .... */
     background-color: var(--bg-primary);
     color: var(--text-primary);
     /* font-family: var(--font-main); */
@@ -114,7 +115,7 @@ body {
     }
 
     .grayscale {
-        background: linear-gradient(0.25turn, var(--text-primary), var(--bg-primary));
+        background: linear-gradient(0.25turn, var(--text-primary), var(--bg-surface-raised));
         /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient */
         -webkit-background-clip: text;
         background-clip: text;
@@ -148,6 +149,12 @@ body {
 
     display: flex;
     flex-direction: column;
+
+    #hero {
+        background: linear-gradient(var(--bg-surface), var(--bg-primary));
+        min-height: 200dvh; /* fix "too much scrolling" .... */
+        padding-top: 100dvh; /* fix "too much scrolling" .... */
+    }
 }
 
 /* ToDo: "invert" on lightmode ... */

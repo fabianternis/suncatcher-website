@@ -73,7 +73,7 @@
 
     --color-link: var(--gray-70);
     --color-link-hover: var(--gray-60);
-    --fix-top-scroll-bg: 100dvh
+    --fix-top-scroll-bg: 100dvh;
 }
 
 
@@ -86,7 +86,7 @@
 }
 
 body {
-    transform: translateY(calc(-1 * var(--fix-top-scroll-bg))); /* fix "too much scrolling" .... */
+    transform: translateY(-100dvh); /* fix "too much scrolling" .... */
     background-color: var(--bg-primary);
     color: var(--text-primary);
     /* font-family: var(--font-main); */
@@ -153,8 +153,8 @@ body {
 
     #hero {
         background: linear-gradient(var(--bg-surface), var(--bg-primary));
-        min-height: calc(100dvh + var(--fix-top-scroll-bg)); /* fix "too much scrolling" .... */
-        padding-top: var(--fix-top-scroll-bg); /* fix "too much scrolling" .... */
+        min-height: 200dvh; /* fix "too much scrolling" .... */
+        padding-top: 100dvh; /* fix "too much scrolling" .... */
     }
 }
 

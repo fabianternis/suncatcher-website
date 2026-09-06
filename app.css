@@ -195,13 +195,11 @@ body {
                     } */
 
                     &.not {
-                        --THIS-font-family: var(--font-billy-ohio);
-                        font-family: var(var(--font-family));
-                        animation: not_class-font-change 1s linear infinite;;
-                        /* max-width: 3px;
-                        min-width: 3px;
-                        widtH: 3px; */
-                        overflow-x: hidden;
+                        /* display: inline-block; */
+                        /* max-width: 30px;
+                        max-width: 30px; */
+                        /* overflow-x: hidden; */
+                        animation: not_class-font-change 1s linear infinite;
                     }
                 }
 
@@ -218,15 +216,15 @@ body {
 
 @keyframes not_class-font-change {
     0% {
-        /* font-family: var(--font-billy-ohio); */
+        font-family: var(--font-main);
     }
-    33% {
+    22% {
         font-family: var(--font-lemon-tuesday);
     }
-    99% {
+    60% {
         font-family: var(--font-pacifico);
     }
     100% {
-        /* font-family: var(--font-billy-ohio); */
+        font-family: var(--font-main);
     }
 }

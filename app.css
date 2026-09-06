@@ -1,12 +1,45 @@
 :root {
-    --hex-0: #000;
+    /* --hex-0: #000; */
     /* ...
     ToDo: Add more ...
      */
-    --hex-255: #fff;
+    /* --hex-255: #fff;
 
     --color-full-black: var(var(--hex-0));
-    --color-full-white: var(var(--hex-255));
+    --color-full-white: var(var(--hex-255)); */
+
+    --animation-duration: .3s;
+    --animation: none;
+    --animation: var(--animation-duration) var(--animation) var(--animation-duration);
+
+
+    /* Following best-practices (once) */
+
+    --gray-0: #000000;
+    --gray-5: #0d0d0d;
+    --gray-10: #1a1a1a;
+    --gray-20: #2e2e2e;
+    --gray-30: #4a4a4a;
+    --gray-40: #707070;
+    --gray-50: #8c8c8c;
+    --gray-60: #aeaeae;
+    --gray-70: #d1d1d1;
+    --gray-80: #e8e8e8;
+    --gray-90: #f5f5f5;
+    --gray-100: #ffffff;
+
+    /* End of best-practices */
+
+    --bg-primary: var(--gray-0);
+    --bg-surface: var(--gray-10);
+    --bg-surface-raised: var(--gray-20);
+
+    --border-subtle: var(--gray-20);
+    --border-strong: var(--gray-40);
+
+    --text-primary: var(--gray-100);
+    --text-secondary: var(--gray-60);
+    --text-muted: var(--gray-40);
 }
 
 

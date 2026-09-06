@@ -114,9 +114,12 @@ body {
     }
 
     .grayscale {
-        :nth-child {
-
-        }
+        background: linear-gradient(0.25turn, var(--text-primary), var(--bg-primary));
+        /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient */
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        color: transparent;
     }
 
     footer {
@@ -126,6 +129,7 @@ body {
 
         width: min(92vw, 1100px);
         margin-inline: auto;
+        margin-top: auto;
         min-height: 40dvh;
 
         padding: 2rem 2rem 0.75rem;
@@ -136,10 +140,14 @@ body {
         --color-link: var(--gray-10);
         --color-link-hover: var(--gray-20);
 
-        font-family: var(--font-main)
+        font-family: var(--font-main);
     }
 
     width: 100vw;
+    min-height: 100dvh;
+
+    display: flex;
+    flex-direction: column;
 }
 
 /* ToDo: "invert" on lightmode ... */

@@ -353,6 +353,8 @@ body {
                 /* justify-content: flex-end; */
             }
         }
+
+        margin-top: 20dvh;
     }
 
     width: 100vw;
@@ -376,6 +378,7 @@ body {
             font-size: 2rem;
             .words {
                 transform: translateY(20px);
+                /* gap: 5px; */
                 /* rotate: 90deg; */
                 .word {
                     /* color: red; */
@@ -408,15 +411,17 @@ body {
             font-family: var(--font-mochi-boom);
             font-size: 2.75rem;
             font-weight: 100;
+            text-align: center;
 
             .fancy {
-            font-family: var(--font-pacifico);
+                font-family: var(--font-pacifico);
             }
         }
 
         .container {
             .transformation-one {
-                width: 100%;
+                width: 70vw;
+                margin-inline: auto;
 
                 h4 {
                     font-family: var(--font-main);
@@ -430,19 +435,19 @@ body {
                     width: 100%;
 
                     .item {
-                    flex: 1;
-                    height: 120px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    color: #ffffff;
-                    background-color: var(--gray-30);
-                    cursor: pointer;
-                    transition: flex 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+                        flex: 1;
+                        height: 120px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #ffffff;
+                        background-color: var(--gray-30);
+                        cursor: pointer;
+                        transition: flex 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
                         &:hover {
                             flex: 3;
-                            background-color: var(--gray-40);
+                            background-color: var(--gray-20);
                         }
                     }
                 }

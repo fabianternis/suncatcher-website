@@ -23,6 +23,178 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: "Awesome";
+    src: url("fonts/awesome/Awesome.otf") format("opentype"),
+         url("fonts/awesome/Awesome.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ballmain";
+    src: url("fonts/ballmain/Ballmain.otf") format("opentype"),
+         url("fonts/ballmain/Ballmain.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Centralwell";
+    src: url("fonts/centralwell/Centralwell.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Chalk Board";
+    src: url("fonts/chalk_board/Chalk Board.otf") format("opentype"),
+         url("fonts/chalk_board/Chalk Board.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Child Hood";
+    src: url("fonts/child_hood/Child Hood.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Eagle Horizon";
+    src: url("fonts/eagle_horizon/EagleHorizonP.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Early Quake";
+    src: url("fonts/early_quake/Early Quake DEMO.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Handmade Alphabet";
+    src: url("fonts/handmade_alphabet/Handmade Alphabet.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Milkyway";
+    src: url("fonts/milkyway/Milkyway DEMO.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mochi Boom";
+    src: url("fonts/mochi_boom/Mochi Boom DEMO.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mochi Boom Extrude";
+    src: url("fonts/mochi_boom/Mochi Boom Extrude DEMO.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mochibop";
+    src: url("fonts/mochibop/Mochibop-Demo.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Mochibop";
+    src: url("fonts/mochibop/MochibopBold-Demo.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Moldie";
+    src: url("fonts/moldie/Moldie Demo.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Qilka";
+    src: url("fonts/qilka/Qilka-Bold copy.otf") format("opentype");
+    font-weight: 400 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Shooting Star";
+    src: url("fonts/shooting_star/Shooting Star.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Southern Beach";
+    src: url("fonts/southern_beach/Southern Beach.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Spicy Sale";
+    src: url("fonts/spicy_sale/Spicy Sale.otf") format("opentype"),
+         url("fonts/spicy_sale/Spicy Sale.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Talina";
+    src: url("fonts/talina/Talina DEMO.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Transcity";
+    src: url("fonts/transcity/Transcity DEMO.otf") format("opentype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Whispering Signature";
+    src: url("fonts/whispering_signature/WhisperingSignature.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     /* --hex-0: #000; */
     /* ...
@@ -42,6 +214,26 @@
     --font-pacifico: "Pacifico", cursive;
     --font-lemon-tuesday: "Lemon Tuesday", cursive;
     --font-billy-ohio: "Billy Ohio", cursive;
+    --font-awesome: "Awesome", cursive;
+    --font-ballmain: "Ballmain", cursive;
+    --font-centralwell: "Centralwell", cursive;
+    --font-chalk-board: "Chalk Board", cursive;
+    --font-child-hood: "Child Hood", cursive;
+    --font-eagle-horizon: "Eagle Horizon", cursive;
+    --font-early-quake: "Early Quake", cursive;
+    --font-handmade-alphabet: "Handmade Alphabet", cursive;
+    --font-milkyway: "Milkyway", cursive;
+    --font-mochi-boom: "Mochi Boom", cursive;
+    --font-mochi-boom-extrude: "Mochi Boom Extrude", cursive;
+    --font-mochibop: "Mochibop", cursive;
+    --font-moldie: "Moldie", cursive;
+    --font-qilka: "Qilka", cursive;
+    --font-shooting-star: "Shooting Star", cursive;
+    --font-southern-beach: "Southern Beach", cursive;
+    --font-spicy-sale: "Spicy Sale", cursive;
+    --font-talina: "Talina", cursive;
+    --font-transcity: "Transcity", cursive;
+    --font-whispering-signature: "Whispering Signature", cursive;
 
     /* Following best-practices (once) */
 

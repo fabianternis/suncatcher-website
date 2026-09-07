@@ -402,6 +402,53 @@ body {
             }
         }
     }
+
+    #transformations {
+        h2 {
+            font-family: var(--font-mochi-boom);
+            font-size: 2.75rem;
+            font-weight: 100;
+
+            .fancy {
+            font-family: var(--font-pacifico);
+            }
+        }
+
+        .container {
+            .transformation-one {
+                width: 100%;
+
+                h4 {
+                    font-family: var(--font-main);
+                    font-size: 1.65432rem;
+                    margin-bottom: 12px;
+                }
+
+                .container-one {
+                    display: flex;
+                    gap: 16px;
+                    width: 100%;
+
+                    .item {
+                    flex: 1;
+                    height: 120px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: #ffffff;
+                    background-color: var(--gray-30);
+                    cursor: pointer;
+                    transition: flex 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+                        &:hover {
+                            flex: 3;
+                            background-color: var(--gray-40);
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 /* ToDo: "invert" on lightmode ... */
 

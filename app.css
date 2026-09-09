@@ -365,12 +365,22 @@ body {
     flex-direction: column;
 
     #hero {
-        background: linear-gradient(var(--bg-surface), var(--bg-primary));
-        min-height: 40dvh;
+        background: linear-gradient(var(--bg-primary), var(--bg-surface));
+        min-height: 100dvh;
+        display: grid;
+        place-content: center;
+        text-align: center;
+        h1 {
+            font-size: 5.5rem;
+        }
+        h2 {
+            font-size: 3.75rem;
+        }
     }
 
     #dead {
-        min-height: 20vh;
+        background: linear-gradient(var(--bg-surface), var(--bg-primary));
+        min-height: 40vh;
         /* display: flex; */
         /* align-items: center; */
 
@@ -395,7 +405,7 @@ body {
                         max-width: 30px; */
                         /* overflow-x: hidden; */
                         animation: not_class-font-change 7.5s cubic-bezier(.73,.13,0,.37) infinite;
-                        animation: not_class-font-change 5s linear infinite;
+                        animation: not_class-font-change 4.5s linear infinite;
                     }
                 }
 
@@ -444,8 +454,7 @@ body {
                         color: #ffffff;
                         background-color: var(--gray-30);
                         cursor: pointer;
-                        transition: flex 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
+                        
                         border-radius: .2rem;
                         /* &:nth-last-child() { */
                         &:nth-child(3) {
@@ -459,15 +468,16 @@ body {
                             border-radius: 2rem .2rem .2rem 2rem;
                             font-family: var(--font-spicy-sale);
                         }
-
+                        
                         font-size: 1rem;
                         &:hover {
                             flex: 2;
                             background-color: var(--gray-20);
                             font-size: 3.33rem;
                         }
-
-                        transition: all var(--transition-duration-normal) cubic-bezier(.13,-0.17,.27,1.26);
+                        
+                        /* transition: flex 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1); */
+                        transition: all var(--transition-duration-normal) cubic-bezier(.55,.66,.44,1.03);
                     }
                 }
             }

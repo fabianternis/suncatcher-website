@@ -394,7 +394,8 @@ body {
                         /* max-width: 30px;
                         max-width: 30px; */
                         /* overflow-x: hidden; */
-                        animation: not_class-font-change 1s linear infinite;
+                        animation: not_class-font-change 7.5s cubic-bezier(.73,.13,0,.37) infinite;
+                        animation: not_class-font-change 5s linear infinite;
                     }
                 }
 
@@ -445,10 +446,28 @@ body {
                         cursor: pointer;
                         transition: flex 0.4s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-                        &:hover {
-                            flex: 3;
-                            background-color: var(--gray-20);
+                        border-radius: .2rem;
+                        /* &:nth-last-child() { */
+                        &:nth-child(3) {
+                            border-radius: .2rem 2rem 2rem .2rem;
+                            font-family: var(--font-early-quake);
                         }
+                        &:nth-child(2) {
+                            font-family: var(--font-milkyway);
+                        }
+                        &:nth-child(1) {
+                            border-radius: 2rem .2rem .2rem 2rem;
+                            font-family: var(--font-spicy-sale);
+                        }
+
+                        font-size: 1rem;
+                        &:hover {
+                            flex: 2;
+                            background-color: var(--gray-20);
+                            font-size: 3.33rem;
+                        }
+
+                        transition: all var(--transition-duration-normal) cubic-bezier(.13,-0.17,.27,1.26);
                     }
                 }
             }
@@ -459,16 +478,70 @@ body {
 
 
 @keyframes not_class-font-change {
-    0% {
+    0%, 100% {
         font-family: var(--font-main);
     }
-    22% {
-        font-family: var(--font-lemon-tuesday);
-    }
-    60% {
+    4.5% {
         font-family: var(--font-pacifico);
     }
-    100% {
-        font-family: var(--font-main);
+    9% {
+        font-family: var(--font-lemon-tuesday);
+    }
+    13.5% {
+        font-family: var(--font-billy-ohio);
+    }
+    18% {
+        font-family: var(--font-awesome);
+    }
+    22.5% {
+        font-family: var(--font-ballmain);
+    }
+    27% {
+        font-family: var(--font-centralwell);
+    }
+    31.5% {
+        font-family: var(--font-chalk-board);
+    }
+    36% {
+        font-family: var(--font-child-hood);
+    }
+    40.5% {
+        font-family: var(--font-eagle-horizon);
+    }
+    45% {
+        font-family: var(--font-early-quake);
+    }
+    49.5% {
+        font-family: var(--font-handmade-alphabet);
+    }
+    54% {
+        font-family: var(--font-milkyway);
+    }
+    58.5% {
+        font-family: var(--font-mochi-boom);
+    }
+    63% {
+        font-family: var(--font-mochibop);
+    }
+    67.5% {
+        font-family: var(--font-moldie);
+    }
+    72% {
+        font-family: var(--font-qilka);
+    }
+    76.5% {
+        font-family: var(--font-shooting-star);
+    }
+    81% {
+        font-family: var(--font-southern-beach);
+    }
+    85.5% {
+        font-family: var(--font-spicy-sale);
+    }
+    90% {
+        font-family: var(--font-talina);
+    }
+    94.5% {
+        font-family: var(--font-whispering-signature);
     }
 }

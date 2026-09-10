@@ -196,15 +196,6 @@
 }
 
 :root {
-    /* --hex-0: #000; */
-    /* ...
-    ToDo: Add more ...
-     */
-    /* --hex-255: #fff;
-
-    --color-full-black: var(var(--hex-0));
-    --color-full-white: var(var(--hex-255)); */
-
     --transition-duration-fast: .15s;
     --transition-duration-normal: .3s;
     --transition-ease-default: cubic-bezier(0.16, 1, 0.3, 1);
@@ -355,6 +346,20 @@ body {
         }
 
         margin-top: 20dvh;
+
+        .footer-element-sth {
+            position: absolute;
+            font-size: 14rem;
+            color: var(--text-primary);
+            opacity: .4;
+            font-family: var(--font-lemon-tuesday);
+            max-width: 100%;
+
+            pointer-events: none;
+            user-select: none;
+            -webkit-user-select: none;
+        }
+        /* overflow: hidden; */
     }
 
     width: 100vw;

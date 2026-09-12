@@ -296,6 +296,10 @@ body {
         }
     }
 
+    img {
+        filter: grayscale();
+    }
+
     .grayscale {
         background: linear-gradient(0.25turn, var(--text-primary), var(--bg-surface-raised));
         /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Values/gradient/linear-gradient */
@@ -406,17 +410,16 @@ body {
 
         .title {
             font-size: 2rem;
+            /* ToDo: Rotations and bones */
             .words {
                 transform: translateY(20px);
                 /* gap: 5px; */
                 /* rotate: 90deg; */
                 .word {
-                    /* color: red; */
                     /* transform: rotate(20deg); */
                     scale: 2; 
 
                     /* &:nth-child(1) {
-                        color: red;
                     } */
 
                     &.not {
@@ -500,6 +503,43 @@ body {
                         transition: all var(--transition-duration-normal) cubic-bezier(.55,.66,.44,1.03);
                     }
                 }
+            }
+
+            .transformation-two {
+                width: 70vw;
+                margin-inline: auto;
+
+                h4 {
+                    font-family: var(--font-main);
+                    font-size: 1.65432rem;
+                    margin-bottom: 12px;
+                }
+
+                .container-two {
+                    display: flex;
+                    gap: 16px;
+                    width: 100%;
+                    max-width: 100%;
+
+                    img {
+                        flex: 1;
+                        width: 30%;
+                        height: auto;
+
+                        border-radius: 2rem;
+
+                        &:hover {
+                            scale: 1.01;
+                            border-radius: 3rem;
+                        }
+
+                        transition: all calc(var(--transition-duration-normal)) cubic-bezier(.55,.66,.44,1.03);
+                    }
+                    /* transition: all calc(2 * var(--transition-duration-normal)) cubic-bezier(.55,.66,.44,1.03); */
+                }
+
+                /* transition: all calc(2 * var(--transition-duration-normal)) cubic-bezier(.55,.66,.44,1.03);
+                transition: all 5s cubic-bezier(.55,.66,.44,1.03); */
             }
         }
     }

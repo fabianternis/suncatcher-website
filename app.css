@@ -508,6 +508,7 @@ body {
             .transformation-two {
                 width: 70vw;
                 margin-inline: auto;
+                margin-top: 4rem;
 
                 h4 {
                     font-family: var(--font-main);
@@ -520,26 +521,40 @@ body {
                     gap: 16px;
                     width: 100%;
                     max-width: 100%;
+                    height: 350px;
 
                     img {
-                        flex: 1;
-                        width: 30%;
-                        height: auto;
-
-                        border-radius: 2rem;
+                        width: 0; 
+                        flex-grow: 1; 
+                        
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 1rem;
+                        cursor: pointer;
+                        filter: grayscale(100%) brightness(0.8);
+                        
+                        transition: all 0.5s cubic-bezier(.55,.66,.44,1.03);
 
                         &:hover {
-                            scale: 1.01;
-                            border-radius: 3rem;
+                            flex-grow: 3; 
+                            border-radius: 2rem;
+                            filter: grayscale(100%) brightness(1.2);
                         }
-
-                        transition: all calc(var(--transition-duration-normal)) cubic-bezier(.55,.66,.44,1.03);
                     }
-                    /* transition: all calc(2 * var(--transition-duration-normal)) cubic-bezier(.55,.66,.44,1.03); */
+
+                    &:hover img:not(:hover) {
+                        flex-grow: 1.25; 
+                        filter: grayscale(100%) brightness(0.3);
+                    }
                 }
 
-                /* transition: all calc(2 * var(--transition-duration-normal)) cubic-bezier(.55,.66,.44,1.03);
-                transition: all 5s cubic-bezier(.55,.66,.44,1.03); */
+                span {
+                    display: block;
+                    margin-top: 12px;
+                    font-family: var(--font-main);
+                    font-size: 0.85rem;
+                    color: var(--text-muted);
+                }
             }
         }
     }

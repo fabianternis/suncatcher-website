@@ -362,6 +362,8 @@ body {
             pointer-events: none;
             user-select: none;
             -webkit-user-select: none;
+
+            /* ToDo: @media  for font-size*/
         }
         /* overflow: hidden; */
     }
@@ -554,6 +556,93 @@ body {
                     font-family: var(--font-main);
                     font-size: 0.85rem;
                     color: var(--text-muted);
+                }
+            }
+
+            .transformation-three {
+                width: 65vw;
+                margin-top: 3rem;
+                margin-inline: auto;
+                
+                .container-three {
+                    display: flex;
+                    width: 100%;
+                }
+
+                .the-box {
+                    margin-inline: auto;
+                    margin-block: 7vh;
+                    width: 30vh;
+                    height: 30vh;
+                    background: linear-gradient(36deg, var(--gray-90), var(--gray-5));
+                    border-radius: 36px;
+                    padding: 3vh;
+                    corner-shape: squircle; /* Only supported by Chromium: https://developer.mozilla.org/de/docs/Web/CSS/Reference/Properties/corner-shape */
+
+                    /* border-radius: 48% 50% 37% 91% / 52% 49% 80% 64%;
+                    corner-shape: bevel scoop square bevel;
+                    border-radius: 71% 29% 39% 49% / 24% 100% 34% 48%;
+                    corner-shape: superellipse(-0.3) squircle round bevel;  */
+                }
+
+
+                h4 {
+                    font-family: var(--font-handmade-alphabet);
+                    font-size: 2.123rem;
+
+                    width: fit-content;
+                    margin-inline: auto;
+
+                    padding-inline-end: 10vh;
+
+                    .one {
+                        font-family: var(--font-southern-beach);
+                        font-size: 4rem;
+                        position: relative;
+                        display: inline-block;
+
+                        &::after {
+                            content: "";
+                            position: absolute;
+                            left: 0;
+                            bottom: 0.3em;
+                            width: 100%;
+                            height: 12px;
+                            pointer-events: none;
+
+                            /* background-color: var(--gray-80); */
+                            background-color: var(--THIS-underline-color);
+
+                            -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0 5 Q 50 10 100 5' stroke='black' stroke-width='2' fill='transparent'/%3E%3C/svg%3E");
+                            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10' preserveAspectRatio='none'%3E%3Cpath d='M0 5 Q 50 10 100 5' stroke='black' stroke-width='2' fill='transparent'/%3E%3C/svg%3E");
+                            
+                            -webkit-mask-size: 100% 100%;
+                            mask-size: 100% 100%;
+                            -webkit-mask-repeat: no-repeat;
+                            mask-repeat: no-repeat;
+
+                            transition: all .75s cubic-bezier(.17,.67,.56,1.17);
+                        }
+
+
+                        /* &::selection {
+                            &::after {
+                                /* background-color: var(--gray-30); */
+                            /*}
+                            /* --THIS-underline-color: var(--gray-20); */
+                            /* --THIS-underline-color: var(--gray-0); */
+                        /*} */
+                        /* --THIS-underline-color: var(--gray-80); */
+
+                        &:hover {
+                            --THIS-underline-color: var(--gray-50);
+                        }
+                    }
+
+                    &:hover {
+                        --THIS-underline-color: var(--gray-60) !important;
+                    }
+                    --THIS-underline-color: var(--gray-80);
                 }
             }
         }

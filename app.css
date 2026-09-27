@@ -576,13 +576,20 @@ body {
                     height: 30vh;
                     background: linear-gradient(36deg, var(--gray-90), var(--gray-5));
                     border-radius: 36px;
-                    padding: 3vh;
+                    padding: 9vh;
                     corner-shape: squircle; /* Only supported by Chromium: https://developer.mozilla.org/de/docs/Web/CSS/Reference/Properties/corner-shape */
 
                     /* border-radius: 48% 50% 37% 91% / 52% 49% 80% 64%;
                     corner-shape: bevel scoop square bevel;
                     border-radius: 71% 29% 39% 49% / 24% 100% 34% 48%;
                     corner-shape: superellipse(-0.3) squircle round bevel;  */
+
+                    --THIS-darkest: var(--gray-0);
+                    --THIS-brightest: var(--gray-100);
+                    animation: 15s third-transformation--box cubic-bezier(.44,-0.62,.55,1.5) infinite;
+                    /* .ahhhh {
+                        animation: 15s third-transformation--box--reversed-rotation cubic-bezier(.44,-0.62,.55,1.5) infinite;
+                    } */
                 }
 
 
@@ -652,6 +659,7 @@ body {
 
 
 @keyframes not_class-font-change {
+
     0%, 100% {
         font-family: var(--font-main);
     }
@@ -719,3 +727,49 @@ body {
         font-family: var(--font-whispering-signature);
     }
 }
+
+
+@keyframes third-transformation--box {
+    0%, 100% {
+        rotate: 35deg;
+        border-radius: 36px;
+        corner-shape: squircle;
+
+        /* border-radius: 48% 50% 37% 91% / 52% 49% 80% 64%;
+        corner-shape: bevel scoop square bevel;
+        border-radius: 71% 29% 39% 49% / 24% 100% 34% 48%;
+        corner-shape: superellipse(-0.3) squircle round bevel;  */
+    }
+    4.5% {
+        border-radius: 48% 50% 37% 91% / 52% 49% 80% 64%;
+    }
+    9% {
+        corner-shape: bevel scoop square bevel;
+    }
+    13.5% {
+        border-radius: 71% 29% 39% 49% / 24% 100% 34% 48%;
+    }
+    18% {
+        corner-shape: superellipse(-0.3) squircle round bevel; 
+    }
+    22.5% {
+        rotate: 320deg;
+        border-radius: 48% 50% 37% 91% / 52% 49% 80% 64%;
+        corner-shape: bevel scoop square bevel;
+    }
+    76.5% {
+        rotate: -320deg;
+    }
+}
+/* 
+@keyframes third-transformation--box--reversed-rotation {
+    0%, 100% {
+        rotate: -35deg;
+    }
+    22.5% {
+        rotate: -320deg;
+    }
+    76.5% {
+        rotate: 320deg;
+    }
+} */

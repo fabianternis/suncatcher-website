@@ -773,3 +773,27 @@ body {
         rotate: 320deg;
     }
 } */
+
+
+#github-qr {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media (max-width: 900px) {
+        display: none;
+    }
+
+    img {
+        /* image styles */
+        /* scale: .1; */
+        scale: 1.035;
+    }
+    /* scale: .1; */
+
+    border-radius: 32px;
+    border-radius: 32px 0 0 32px;
+    overflow: hidden;
+    /* padding: -12px; */
+}

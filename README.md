@@ -1,0 +1,13 @@
+# A website for the SunCatcher Progam by hackClun
+
+This is a playful grayscale-only Website which i made with fun.
+I also experimented with Fonts a bit on this Project.
+THis is not AI-Slop but a Hand-Written Experience
+
+
+
+## View it
+- live demo: [here](https://href.nz/4hd) (direct: [projects.fabianternis.de/suncatcher-website](https://projects.fabianternis.de/suncatcher-website/))
+
+- mobile: ![img](https://href.nz/4hd/qr)
+

@@ -439,6 +439,10 @@ body {
             .dead {
                 font-family: var(--font-main);
             }
+
+            /* width: fit-content;
+            margin-inline: auto; */
+            margin-inline-start: 2rem;
         }
     }
 
@@ -574,7 +578,6 @@ body {
                     margin-block: 7vh;
                     width: 30vh;
                     height: 30vh;
-                    background: linear-gradient(36deg, var(--gray-90), var(--gray-5));
                     border-radius: 36px;
                     padding: 9vh;
                     corner-shape: squircle; /* Only supported by Chromium: https://developer.mozilla.org/de/docs/Web/CSS/Reference/Properties/corner-shape */
@@ -590,6 +593,8 @@ body {
                     /* .ahhhh {
                         animation: 15s third-transformation--box--reversed-rotation cubic-bezier(.44,-0.62,.55,1.5) infinite;
                     } */
+
+                    background: linear-gradient(36deg, var(--THIS-brightest), var(--THIS-darkest));
                 }
 
 
@@ -734,6 +739,7 @@ body {
         rotate: 35deg;
         border-radius: 36px;
         corner-shape: squircle;
+        --THIS-darkest: var(--gray-10);
 
         /* border-radius: 48% 50% 37% 91% / 52% 49% 80% 64%;
         corner-shape: bevel scoop square bevel;
@@ -742,6 +748,7 @@ body {
     }
     4.5% {
         border-radius: 48% 50% 37% 91% / 52% 49% 80% 64%;
+        background: linear-gradient(36deg, var(--THIS-brightest), var(--THIS-darkest));
     }
     9% {
         corner-shape: bevel scoop square bevel;
@@ -750,15 +757,21 @@ body {
         border-radius: 71% 29% 39% 49% / 24% 100% 34% 48%;
     }
     18% {
-        corner-shape: superellipse(-0.3) squircle round bevel; 
+        corner-shape: superellipse(-0.3) squircle round bevel;
+        --THIS-brightest: var(--gray-80);
     }
     22.5% {
         rotate: 320deg;
         border-radius: 48% 50% 37% 91% / 52% 49% 80% 64%;
         corner-shape: bevel scoop square bevel;
     }
+    45% {
+        background: linear-gradient(99deg, var(--THIS-brightest), var(--THIS-darkest));
+        --THIS-brightest: var(--gray-100);
+    }
     76.5% {
         rotate: -320deg;
+        --THIS-darkest: var(--gray-0);
     }
 }
 /* 
@@ -779,21 +792,68 @@ body {
     position: fixed;
     right: 0;
     top: 50%;
-    transform: translateY(-50%);
 
-    @media (max-width: 900px) {
-        display: none;
+    transform: translateY(-50%);
+    transform-origin: right center;
+    
+    scale: 0.35;
+    opacity: 0.5;
+    
+    background-color: var(--bg-surface-raised);
+    padding: 16px;
+    border-radius: 32px 0 0 32px;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    z-index: 100;
+    cursor: pointer;
+
+    transition: all 0.5s cubic-bezier(.55,.66,.44,1.03);
+
+    .qr-text {
+        font-family: var(--font-main);
+        /* font-size: 1.1rem; */
+        color: var(--text-primary);
+        font-weight: bold;
+        opacity: 0;
+        white-space: nowrap;
+        transition: opacity 0.3s ease-in-out;
+        /* display: none; */
+        font-size: 0rem;
+
+        transition: all 0.5s cubic-bezier(.55,.66,.44,1.03);
     }
 
     img {
-        /* image styles */
-        /* scale: .1; */
-        scale: 1.035;
+        width: 150px;
+        height: auto;
+        border-radius: 12px;
+        filter: grayscale(100%);
+        transition: filter 0.4s ease;
     }
-    /* scale: .1; */
 
-    border-radius: 32px;
-    border-radius: 32px 0 0 32px;
-    overflow: hidden;
-    /* padding: -12px; */
+    &:hover {
+        scale: 1;
+        opacity: 1;
+        box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.15);
+
+        .qr-text {
+            opacity: 1;
+            font-size: 1.1rem;
+        }
+
+        img {
+            filter: grayscale(0%);
+        }
+    }
+
+    @media (max-width: 900px) {
+        scale: 0.25;
+        
+        &:hover {
+            scale: 0.85;
+        }
+    }
 }
